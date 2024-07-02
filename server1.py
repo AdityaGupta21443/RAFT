@@ -86,6 +86,7 @@ def make_meta():
             commitindex=int(lines[2].split()[0])
             lastApplied=int(lines[3].split()[0])
             
+    print(f"term: {term}\nvoted for: {voted_for}\ncommitindex: {commitindex}\nlastApplied: {lastApplied}")
 
 
 
@@ -196,6 +197,7 @@ def leader_job():
     write_to_log(f"NO OP {term} {lastApplied}\n")
     matchIndex=[0]*6
     nextIndex=[lastApplied]*6
+    print("nextIndex",nextIndex)
    
     
     time.sleep(2.5)
